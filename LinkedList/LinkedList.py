@@ -35,6 +35,9 @@ class LinkedList:
     def __str__(self):
         return self.__repr__()
 
+    def get_head_node(self):
+        return self.head
+
     #Insert node to the start of the list - O(1) complexity
     def insert(self, data):
         #Create a new node for inserted data and set it's link to the current head
