@@ -21,7 +21,7 @@ def slow(list):
 This method utilises two pointers, the first traverses the list 1 node at a time
 and the other 2 nodes at a time. Since n is 2*(n/2) and the second pointer moves
 twice as fast as the first, once the second pointer reaches n, the first will be
-at n/2 which is the middle of the list.  
+at n/2 which is the middle of the list.
 """
 def fast(list):
     fstPtr = list.get_head_node()
