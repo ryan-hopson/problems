@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#Linked List Problems
-=======
 # Linked List Problems
 >>>>>>> Linked-List
 My solutions to the following linked list problems
