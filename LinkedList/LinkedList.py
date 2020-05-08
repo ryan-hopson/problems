@@ -39,13 +39,22 @@ class LinkedList:
         return self.head
 
     #Insert node to the start of the list - O(1) complexity
-    def insert(self, data):
+    def insert(self, data, at=0):
         #Create a new node for inserted data and set it's link to the current head
-        list_node = ListNode(data, self.head)
-        #Reassign head node to inserted node
-        self.head = list_node
+        prev = None
+        curr = self.head
+        for i in range(at):
+            prev = curr
+            if curr is None:
+                raise ValueError("Cannot insert value into linked list passed size")
+            curr = curr.get_next()
+        list_node = ListNode(data, curr)
 
-    #TODO: Allow nodes to be added to end or inside the LinkedList
+        #Insert node into position otherwise reassign head node to inserted node
+        if prev is not None:
+            prev.set_next(list_node)
+        else:
+            self.head = list_node
 
     #Searches the list to find node to delete and sets the node before it to point to the node after it - O(n) complexity worse case
     def delete(self, data):
