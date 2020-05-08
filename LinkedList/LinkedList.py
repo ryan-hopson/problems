@@ -38,6 +38,9 @@ class LinkedList:
     def get_head_node(self):
         return self.head
 
+    def set_head(self, node):
+        self.head = node
+
     #Insert node to the start of the list - O(1) complexity
     def insert(self, data, at=0):
         #Create a new node for inserted data and set it's link to the current head
