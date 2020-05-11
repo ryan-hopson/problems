@@ -64,6 +64,17 @@ class BinaryTree:
     def print(self):
         self.print_tree(self.root, 0)
 
+    #Returns the height of the tree from root
+    def get_height(self):
+        return self.get_height_from_node(self.root)
+
+    #Returns the height of the tree from any given node
+    def get_height_from_node(self, node):
+        if node is None:
+            return 0
+
+        return max(self.get_height_from_node(node.get_left()), self.get_height_from_node(node.get_right())) + 1
+
     def print_tree(self, current, indent):
         if current is not None:
             print(indent * " " + "-> " + str(current.get_data()))
